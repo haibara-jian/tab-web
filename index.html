@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人导航页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .search-container {
+            padding: 30px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .search-box {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            font-size: 16px;
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+        
+        .search-input:focus {
+            border-color: #4facfe;
+            box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
+        }
+        
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        
+        .category {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .category h3 {
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4facfe;
+            font-size: 1.3em;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .link-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s ease;
+            border-left: 4px solid #4facfe;
+        }
+        
+        .link-item:hover {
+            background: #4facfe;
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .link-item i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .categories {
+                grid-template-columns: 1fr;
+            }
+            
+            body {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌟 我的导航页</h1>
+            <p>常用网站快速访问 | 提升工作效率</p>
+        </div>
+        
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索网站或输入网址...">
+            </div>
+        </div>
+        
+        <div class="categories">
+            <div class="category">
+                <h3>💻 工作学习</h3>
+                <div class="links">
+                    <a href="https://www.google.com" class="link-item" target="_blank">
+                        <i>🔍</i> Google
+                    </a>
+                    <a href="https://github.com" class="link-item" target="_blank">
+                        <i>🐙</i> GitHub
+                    </a>
+                    <a href="https://stackoverflow.com" class="link-item" target="_blank">
+                        <i>❓</i> Stack Overflow
+                    </a>
+                    <a href="https://www.w3schools.com" class="link-item" target="_blank">
+                        <i>📚</i> W3Schools
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🌐 社交媒体</h3>
+                <div class="links">
+                    <a href="https://www.facebook.com" class="link-item" target="_blank">
+                        <i>📘</i> Facebook
+                    </a>
+                    <a href="https://twitter.com" class="link-item" target="_blank">
+                        <i>🐦</i> Twitter
+                    </a>
+                    <a href="https://www.linkedin.com" class="link-item" target="_blank">
+                        <i>💼</i> LinkedIn
+                    </a>
+                    <a href="https://www.youtube.com" class="link-item" target="_blank">
+                        <i>📺</i> YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🛒 购物娱乐</h3>
+                <div class="links">
+                    <a href="https://www.amazon.com" class="link-item" target="_blank">
+                        <i>📦</i> Amazon
+                    </a>
+                    <a href="https://www.netflix.com" class="link-item" target="_blank">
+                        <i>🎬</i> Netflix
+                    </a>
+                    <a href="https://www.spotify.com" class="link-item" target="_blank">
+                        <i>🎵</i> Spotify
+                    </a>
+                    <a href="https://www.ebay.com" class="link-item" target="_blank">
+                        <i>💰</i> eBay
+                    </a>
+                </div>
+            </div>
+            
+            <div class="category">
+                <h3>🎓 教育工具</h3>
+                <div class="links">
+                    <a href="https://www.coursera.org" class="link-item" target="_blank">
+                        <i>🎓</i> Coursera
+                    </a>
+                    <a href="https://www.khanacademy.org" class="link-item" target="_blank">
+                        <i>📝</i> Khan Academy
+                    </a>
+                    <a href="https://www.udemy.com" class="link-item" target="_blank">
+                        <i>📖</i> Udemy
+                    </a>
+                    <a href="https://www.wikipedia.org" class="link-item" target="_blank">
+                        <i>📚</i> Wikipedia
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2024 个人导航页 | 设计简洁，使用便捷</p>
+        </div>
+    </div>
+
+    <script>
+        // 搜索框功能
+        document.querySelector('.search-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                let query = this.value.trim();
+                if (query) {
+                    if (query.includes('.') && !query.startsWith('http')) {
+                        window.open('https://' + query, '_blank');
+                    } else {
+                        window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
+                    }
+                }
+            }
+        });
+        
+        // 添加点击链接时的动画效果
+        document.querySelectorAll('.link-item').forEach(link => {
+            link.addEventListener('click', function(e) {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
