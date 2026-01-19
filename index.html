@@ -159,15 +159,11 @@
             <p>由于网络或者供电问题，源站无法访问，这是备份站。</p>
         </div>
         
-        <div class="search-container">
-            <div class="search-box">
-                <input type="text" class="search-input" placeholder="搜索网站或输入网址...">
-            </div>
-        </div>
+        
         
         <div class="categories">
             <div class="category">
-                <h3>💻 工作学习</h3>
+                <h3>💻 网页</h3>
                 <div class="links">
                     <a href="https://gitwww.niaohan.top" class="link-item" target="_blank">
                         <i>🔍</i> 灰原键的博客
@@ -182,7 +178,7 @@
             </div>
             
             <div class="category">
-                <h3>🌐 社交媒体</h3>
+                <h3>🌐 小游戏</h3>
                 <div class="links">
                     <a href="https://gitsumi.niaohan.top" class="link-item" target="_blank">
                         <i>📘</i> 合成大瓜咪
@@ -198,24 +194,12 @@
         </div>
         
         <div class="footer">
-            <p>&copy; 2026 |灰原键导航页 </p>
+            <p>&copy; 2026  |  灰原键导航页 </p>
         </div>
     </div>
 
     <script>
-        // 搜索框功能
-        document.querySelector('.search-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                let query = this.value.trim();
-                if (query) {
-                    if (query.includes('.') && !query.startsWith('http')) {
-                        window.open('https://' + query, '_blank');
-                    } else {
-                        window.open('https://www.google.com/search?q=' + encodeURIComponent(query), '_blank');
-                    }
-                }
-            }
-        });
+        
         
         // 添加点击链接时的动画效果
         document.querySelectorAll('.link-item').forEach(link => {
